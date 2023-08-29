@@ -32,6 +32,10 @@
               <%= f.password_field :password_confirmation, class: 'form-control' %>
             </div>
             <div class="mb-3">
+              <%= f.label :gender %>
+              <%= f.select :gender, User.genders_i18n.invert.map{|key,value|[key,value]}, { include_blank: '性別を選択してください' }, class: 'form-control' %>
+            </div>
+            <div class="mb-3">
               <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="agreeCheck">
                 <label class="form-check-label" for="agreeCheck"><span>I agree to the <a href="terms-condition-page.html">Terms of
