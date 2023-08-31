@@ -6,7 +6,7 @@
           <div class="d-flex align-items-center">
             <div class="p-3">
               <h5 class="m-0">
-                <% if @event&.woman_only %>
+                <% if @event&.woman_only_event? %>
                   <span class="badge bg-secondary">女性限定</span>
                 <% end %>
                 <span class="badge bg-secondary">

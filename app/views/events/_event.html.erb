@@ -1,6 +1,6 @@
 <div class="col">
   <div class="card h-100">
-    <% if event&.woman_only %>
+    <% if event&.woman_only_event? %>
       <span class="badge bg-secondary">女性限定</span>
     <% end %>
     <%= link_to event_path(event) do %>
