@@ -8,4 +8,9 @@ FactoryBot.define do
     prefecture_id { [*1..47].sample }
     user
   end
+
+  trait :woman_only_event do
+    only_woman { true }
+    user { FactoryBot.create(:user, :woman_user) }
+  end
 end
